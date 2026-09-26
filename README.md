@@ -6,24 +6,7 @@ handing that assistant the keys to your account.**
 Live at **<https://askmytele.com>** — paste `https://askmytele.com/mcp` into
 Claude or ChatGPT as a custom connector, scan the QR with your phone, done.
 
-This repository is documentation, not the deployment tree — it exists so
-anyone deciding whether to point their Telegram account at this connector can
-check the claims below before they scan anything. (Why a separate repo
-instead of the running code: see [Source](#source).)
-
-## What it is
-
-One server that is simultaneously:
-
-1. an OAuth 2.1 authorization server,
-2. an OAuth 2.1 protected resource — the MCP server itself,
-3. a raw MTProto Telegram client (no TDLib, no bindings, no bot masquerading
-   as you).
-
-You authorize it the way you'd authorize any OAuth app: Claude or ChatGPT
-redirects you to a login screen, you scan a QR code with Telegram on your
-phone (2FA if you have it), and the assistant gets a token. No password, no
-API key, ever leaves Telegram's own login flow.
+Try it without connecting anything: **<https://askmytele.com/demo>**.
 
 ## What it can do
 
