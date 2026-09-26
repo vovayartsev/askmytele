@@ -25,30 +25,17 @@ Try it without connecting anything: **<https://askmytele.com/demo>**.
 
 ## What it deliberately cannot do
 
-The product's central claim is a restraint claim, and it's meant to be
-checked, not taken on faith:
+To respect your privacy and everyone else's:
 
-- **No join, no leave, no invite. Ever.** Channel-joining and invite-import
-  calls are not wrapped and will not be. An agent that can join arbitrary
-  channels is a botnet node.
-- **Nothing you do here is visible to anyone else**, except the two writes
-  above — both fixed-destination, both consented to before they happen. No
-  sending to a third party, no reacting, no posting, no editing, no deleting.
-- **No marking read.** Reading a channel here never touches your unread state.
-- **No discovery of anything you're not already in.** Username resolution and
-  global search are not exposed to the caller — you can only read channels
-  already in your own dialog list. There is no way to hand this assistant a
-  channel you haven't joined and have it look inside.
-- **Public surfaces only.** Public broadcast channels and public supergroups
-  are readable; private channels, private groups, DMs and saved messages never
-  appear in any response — filtered server-side, so a private channel is
-  *absent*, not merely unlabeled.
-- **You never name a peer directly.** Tools take a channel name; Telegram's
-  internal peer reference is re-derived server-side from your own dialog list,
-  never accepted as caller input.
-- **Revocable without asking us.** The connection shows up in Telegram under
-  Settings → Devices like any other linked session. Terminate it there and
-  this stops working immediately — no ticket, no email.
+1. **No messaging on your behalf.** The one write tool (`notify`) can only
+   message the account that installed the connector — no recipient argument
+   exists for it to be pointed elsewhere.
+2. **Doesn't change the state of your account** — no joining, leaving, or
+   marking as read — because everything except `notify` is read-only by
+   design.
+3. **Doesn't read DMs or private groups**, because those messages aren't
+   meant to be sent to a third-party LLM provider. Only public channels and
+   public supergroups are reachable.
 
 ## Source
 
