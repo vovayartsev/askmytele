@@ -8,6 +8,8 @@ Claude or ChatGPT as a custom connector, scan the QR with your phone, done.
 
 Try it without connecting anything: **<https://askmytele.com/demo>**.
 
+![demo](demo.gif)
+
 ## What it can do
 
 - `me`, `list_channels`, `read_channel`, `search_channels` — all read-only.
