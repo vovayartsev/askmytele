@@ -14,12 +14,8 @@ Try it without connecting anything: **<https://askmytele.com/demo>**.
   `search_channels` runs one query across up to five of your own channels and
   returns hits (or "not found") per channel, so "where was this mentioned" is
   answerable without dragging every message through the model.
-- `notify` — the one write tool. It sends a Telegram message **to the account
-  that installed the connector, and to nobody else.** There is no recipient
-  argument of any kind — the destination is derived from your session, not
-  supplied by the caller, so no prompt injection can name a third party. Logging
-  in also subscribes you to the bot that delivers this, once, as you, and the
-  login screen says so before it happens.
+- `notify` — the one write tool. Messages you, and only you — there's no
+  recipient argument, so nothing can ever redirect it to someone else.
 - `feedback_to_developer` — sends the developer a short note in your own
   words. Same shape as `notify`: no recipient argument, fixed destination.
 
